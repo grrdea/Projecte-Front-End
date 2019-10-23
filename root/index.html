@@ -1,0 +1,587 @@
+<!doctype HTML>
+<html lang="pt">
+<head>
+<title>EKO-KYA · O localizador de biodiversidade </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!--FAVICON-->
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<link rel="manifest" href="favicons/site.webmanifest">
+<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#a43223">
+<link rel="shortcut icon" href="favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!--ICONS-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--CSS FILES-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="scss/custom.scss">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- SCRIPTS-->
+<script>
+  function toggle_menu () {
+    var toggle = document.getElementById("icon_menu").innerHTML;
+    if (toggle == "menu") {
+      document.getElementById("icon_menu").innerHTML="clear";
+      document.getElementById("shadowNavbar").style.boxShadow="0px 2px 10px lightgrey";
+    } else {
+      document.getElementById("icon_menu").innerHTML="menu";
+      document.getElementById("shadowNavbar").style.boxShadow="none";
+    }
+  }
+</script>
+</head>
+
+
+<!-- BODY-->
+<body style="background-color: #f4f4f1;">
+<div class="vh-100" style="background-color: white;">
+<!--header--> 
+<div class="vh-100 d-flex flex-column justify-content-between">
+<!-- MAIN MENU-->
+    <nav class="navbar navbar-expand-sm" id="shadowNavbar">
+          <ul class="navbar-nav collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html"><i class="material-icons align-bottom" aria-label="home">home</i> Localizador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Projeto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <!--<a class="nav-link" href="">Inscríbase</a>-->
+                <a class="nav-link text-primary" type="button" data-toggle="modal" data-target="#logIn">
+                  <i class="material-icons">perm_identity</i>Acesso</a>                
+              </li>
+          </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" onclick="toggle_menu()">
+                  <i class="material-icons" id="icon_menu">menu</i>
+            </button>
+            <a class="ml-2 ml-sm-4 navbar-brand">
+                  <img src="images/imago_small_ekokya.png" alt="Eko-Kya®, o jogo da biodiversidade" width="auto" height="auto" class="img-fluid mx-auto d-block">
+            </a>
+    </nav>
+
+<!-- LOGIN MODAL-->
+<div class="modal" id="logIn">
+  <div class="modal-dialog modal-dialog-centered">      
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Acesso</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <form>
+              <div class="form-group">
+                  <label for="email">Correio eletrônico</label>
+                  <input type="text" class="form-control" id="email" placeholder="@">
+              </div>
+              <div class="form-group">
+                  <label for="password">Senha</label>
+                  <input type="text" class="form-control" id="email" placeholder="psw">
+              </div>
+              <button class="btn btn-primary" type="button" data-toggle="" data-target="#" onclick="">Acesso</button>
+          </form>
+        </div>
+        <div class="modal-footer bg-warning">
+            <p>Você é novo neste site? 
+                <a class="btn btn-outline-dark" href="signup.html">
+                    <i class="material-icons">person_add</i>
+                    Inscrever-se
+                </a>
+            </p>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--TITLE SEARCH-->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      ​<picture class="mt-3">
+          <source srcset="images/logo_small_ekokya.png" media="(max-width: 575.98px)">
+          <source srcset="images/logo_ekokya.png">
+          <img src="images/logo_ekokya.png" alt="Eko-Kya®, o jogo da biodiversidade" width="auto" height="auto" class="img-fluid mx-auto d-block">
+      </picture>
+  
+      <h2 class="index text-center py-sm-2">O localizador do jogo da biodiversidade</h2> 
+  </div>
+</div>
+
+    <!--SEARCH FORM-->
+    <div class="row">
+          <!--input-->
+      <div class="input-group col-lg-8 col-sm-10 offset-lg-2 offset-sm-1 px-2">
+          <input class="form-control form-control-lg" type="text" placeholder="">
+          <div class="input-group-prepend">
+            <div class="input-group-text" id="btnGroupAddon"><span class="material-icons">search</span></div>
+          </div>
+            
+      </div>
+    </div>
+    <!--buttons FORM-->
+    <div class="row justify-content-center mt-4">
+        <div>
+          <a href="#" target="_self">
+          <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="search">Localizar</button>
+          </a>    
+        </div>
+        <div>
+          <a href="#vegetais">
+          <button type="button" class="btn btn-outline-dark ml-2 ml-sm-4">Lista Completa <i class="material-icons ">expand_more</i></button></a>  
+        </div>
+    </div> <!--row-->
+    </div>
+
+    <!--idioma-->
+    <div class="container">
+    <div class="row align-items-baseline text-center mb-4">
+      <div class="col-md-2 mb-4 mb-md-0 text-md-left">
+        <div class="dropdown">
+              <button type="button" class="btn-sm dropdown-toggle" data-toggle="dropdown">
+                Idioma
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item active" href="#">Brasileiro</a>
+                <a class="dropdown-item disabled" href="#">English</a>
+                <a class="dropdown-item disabled" href="#">Català</a>
+              </div>
+        </div>
+      </div> <!--end idioma col-->
+      <!--credits/legal-->
+      <div class="col-md-10 text-md-right">
+      <div class="justify-content-end">
+          <a href="#" class="mr-3">Privadesa</a></li>
+          <a href="#" class="mr-3">Termos e condiciones</a></li>
+          <span class="text-nowrap">© Eko-Kya 2019</span>
+      </div>
+      <!--<div class="col-l-8">
+        <ul class="list-unstyled list-inline align-self-bottom">
+          <li class="list-inline-item"><a href="#">Privadesa</a></li>
+          <li class="list-inline-item"><a href="#">Termos e condiciones</a></li>
+          <li class="list-inline-item">© Eko-Kya 2019. Tudos os dereitos reservados.</li>
+        </ul>
+      </div>-->
+      </div><!--end credits ccol-->
+    </div><!--end language row-->
+  </div>
+</div>
+</div>
+
+<!--LISTA COMPLETA-->  
+
+<section id="vegetais">
+
+<!-- HEADER  LISTA DAS ESPECIES-->
+<div class="container">
+  <div class="row pt-5 pb-3 d-flex flex-row justify-content-between align-items-baseline">
+    
+    <div class="col">
+      <h2>Lista alfabética de espécies vegetais</h2>
+    </div>
+<!-- VIEWER OPTIONS NAV-->
+    <div>
+      <ul class="nav d-flex btn-group align-items-baseline" id="viewVeggies" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="listTab" data-toggle="tab" href="#viewList" role="tab"><span class="material-icons">list</span><br>list</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="gridTab" data-toggle="tab" href="#viewGrid" role="tab"><span class="material-icons">grid_on</span><br>red</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" id="imageTab" data-toggle="tab" href="#viewImage" role="tab"><span class="material-icons">image</span><br>img</a>
+      </li>
+    </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="tab-content">
+<article class="container-fluid tab-pane active" id="viewList" aria-labelledby="listTab" role="tabpanel">
+    <!-- Table -->
+    <div class="row">
+    <div class="col">
+    <table class="table table-striped w-100">
+      <thead class="thead-dark ">
+        <tr class="text-center">
+          <th scope="col" class="text-left">Nome comum</th>
+          <th scope="col" class="text-left">Nome científico</th>
+          <th scope="col">Tipo</th>
+          <th scope="col" class="d-none d-lg-table-cell">Parte</th>
+          <th scope="col" class="d-none d-lg-table-cell">Origem geográfica</th>
+          <th scope="col" class="d-none d-lg-table-cell">Bioma/Habitat nativo ou de naturalização</th>
+          <th scope="col" class="d-none d-lg-table-cell">Polinização</th>
+          <th scope="col" class="d-none d-lg-table-cell">Características</th>
+          <th scope="col" class="d-none d-lg-table-cell">Dispersão</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Abacate</th>
+          <td>Persea americana</td>
+          <td><img src="images/icons/icon_tree.png" ></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fruit.png" ></td>
+          <td class="d-none d-lg-table-cell">América do Norte (México)</td>
+          <td class="d-none d-lg-table-cell">Florestas de regiões tropicais e subtropicais (árvore)</td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_abelha.png"><img src="images/icons/icon_mosca.png"><img src="images/icons/icon_vespa.png"><img src="images/icons/icon_formiga.png"></td>
+          <td class="d-none d-lg-table-cell">Maior produção com polinizadores. É polinizado principalmente por dípteros (moscas) e outros insetos nativos, como abelhas sem ferrão (uruçu do litoral do Nordeste ou Melipona scutellaris), e vespas, mas também por outros insetos de origem europeia como a abelha Apis sp., uma espécie de mosca e, de forma secundária, por formigas. Cultivado há mais de 10.000 anos nas Américas, provavelmente é originário da região central do México.</td>
+          <td class="d-none d-lg-table-cell">-</td>
+        </tr>
+        <tr>
+          <th scope="row">Abacaxi</th>
+          <td>Ananas comosus</td>
+          <td><img src="images/icons/icon_orch.png" ></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fruit.png" ></td>
+          <td class="d-none d-lg-table-cell">América do Sul</td>
+          <td class="d-none d-lg-table-cell">Savanas<br>
+            Cerrado (bromeliácea)</td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_colibri.png"></td>
+          <td class="d-none d-lg-table-cell">Os beija-flores são seus principais polinizadores naturais. A planta é nativa da América do Sul e originária de áreas entre Brasil e Paraguai. Existem evidências de que sua domesticação pode ter sido iniciada entre 6.000 e 10.000 anos atrás.</td>
+          <td class="d-none d-lg-table-cell">-</td>
+        </tr>
+        <tr>
+          <th scope="row">Abiu</th>
+          <td>Pouteria caimito</td>
+          <td><img src="images/icons/icon_tree.png" ></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fruit.png"></td>
+          <td class="d-none d-lg-table-cell">Amazônia e Mata Atlântica (do Ceará a São Paulo)</td>
+          <td class="d-none d-lg-table-cell">Florestas pluviais de 0 a 1.500 m de altitude (árvore perenifólia)</td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_abelha.png"></td>
+          <td class="d-none d-lg-table-cell">Autofértil, mas também visitado por moscas e formigas. Ocasionalmente pode ser polinizado por abelhas. Consomem-se os frutos quando bem maduros, sempre com colher (na casca há um látex grudento que cola nos lábios). Considerado nativo nas áreas da cabeceira das águas amazônicas. Cultivada em quintais domésticos.</td>
+          <td class="d-none d-lg-table-cell"></td>
+        </tr>
+         <tr>
+          <th scope="row">Abóbora</th>
+          <td>Cucurbita maxima</td>
+          <td><img src="images/icons/icon_ivy.png" ></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_flower.png" ><img src="images/icons/icon_fruit.png" ><img src="images/icons/icon_seed.png"></td>
+          <td class="d-none d-lg-table-cell">América Central</td>
+          <td class="d-none d-lg-table-cell">Desconhecido. Cultivada em campos de regiões tropicais (herbácea trepadeira)</td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_abelha.png"></td>
+          <td class="d-none d-lg-table-cell">Polinizada por várias espécies de abelhas. No Brasil, por abelhas solitárias grandes (mamangava-de-chão ou Bombus morio) e abelhas nativas como a mandaçaia ou Melipona quadrifasciata e a arapuá ou Trigona spinipes, além de Apis sp.; na Europa, só a abelha Apis mellifera. É uma espécie nativa da América do Sul, cultivada por indígenas há mais de 2.000 anos. Atualmente cultivada em áreas tropicais do mundo (comercialmente e em hortas caseiras).</td>
+          <td class="d-none d-lg-table-cell"></td>
+        </tr>
+        <tr>
+          <th scope="row">Abobrinha</th>
+          <td>Cucurbita pepo</td>
+          <td><img src="images/icons/icon_ivy.png" ></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_flower.png" ><img src="images/icons/icon_fruit.png"></td>
+          <td class="d-none d-lg-table-cell">Américas (do Peru ao Sul dos Estados Unidos)</td>
+          <td class="d-none d-lg-table-cell">Desconhecido. Cultivada em campos de regiões tropicais (herbácea trepadeira)</td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_abelha.png"></td>
+          <td class="d-none d-lg-table-cell">Depende de polinizadores. No Brasil, da espécie de abelha nativa mandaçaia (Melipona quadrifasciata) e da abelha europeia (Apis mellifera). Na Europa é polinizada por Bombus terrestris e Apis mellifera. Cultivada há mais de 10.000 anos na região da América Central e provavelmente sul do México.</td>
+          <td class="d-none d-lg-table-cell"></td>
+        </tr>
+        <tr>
+          <th scope="row">Abrunho</th>
+          <td>Prunus spinosa</td>
+          <td><img src="images/icons/icon_bush.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fruit.png"></td>
+          <td class="d-none d-lg-table-cell">Europa ocidental</td>
+          <td class="d-none d-lg-table-cell">Floresta mediterrânica (arbusto)</td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_abelha.png"><img src="images/icons/icon_mosca.png"></td>
+          <td class="d-none d-lg-table-cell">Em suas regiões de origem é polinizado principalmente por abelhas (Apis sp.) e por moscas. As sementes são dispersadas por mamíferos (raposa, fuinha) e aves (melros e tordos).</td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fuinha.png"><img src="images/icons/icon_raposa.png"><img src="images/icons/icon_ave.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Açafrão (parte da flor – anteras)</th>
+          <td>Crocus sativus</td>
+          <td><img src="images/icons/icon_grass.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_flower.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Açaí</th>
+          <td>Euterpe oleracea</td>
+          <td><img src="images/icons/icon_palm.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_log.png"><img src="images/icons/icon_fruit.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Acelga</th>
+          <td>Beta vulgaris var. cicla</td>
+          <td><img src="images/icons/icon_grass.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_leave.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Acerola</th>
+          <td>Malpighia glabra</td>
+          <td><img src="images/icons/icon_bush.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fruit.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Acuri, bacuri1</th>
+          <td>Attalea phalerata</td>
+          <td><img src="images/icons/icon_palm.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fruit.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Àgave, sisal</th>
+          <td>Agave spp.</td>
+          <td><img src="images/icons/icon_orch.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_log.png"><img src="images/icons/icon_fruit.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Agrião</th>
+          <td>Larry</td>
+          <td><img src="images/icons/icon_grass.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_leave.png"></td>
+        </tr>
+          <tr>
+          <th scope="row">Aipo, salsão</th>
+          <td>First</td>
+          <td><img src="images/icons/icon_grass.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_log.png"><img src="images/icons/icon_leave.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Albaricoque, damasco</th>
+          <td>Mark</td>
+          <td><img src="images/icons/icon_tree.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_fruit.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Alcachofra</th>
+          <td>Jacob</td>
+          <td><img src="images/icons/icon_grass.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_flower.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Alcaçuz, regaliz</th>
+          <td>Larry</td>
+          <td><img src="images/icons/icon_grass.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_log.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Alcaparra</th>
+          <td>Mark</td>
+          <td><img src="images/icons/icon_bush.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_flower.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Alecrim</th>
+          <td>Jacob</td>
+          <td><img src="images/icons/icon_bush.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_leave.png"></td>
+        </tr>
+        <tr>
+          <th scope="row">Alface</th>
+          <td>Larry</td>
+          <td><img src="images/icons/icon_grass.png"></td>
+          <td class="d-none d-lg-table-cell"><img src="images/icons/icon_leave.png"></td>
+        </tr>
+        <tr>
+            <th scope="row">Alfavaca, alfavaca-de-folha-larga, basilicão</th>
+            <td>Larry</td>
+            <td><img src="images/icons/icon_grass.png"></td>
+            <td class="d-none d-lg-table-cell"><img src="images/icons/icon_leave.png"></td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+</article>
+
+<!-- CARDS -->
+  <article class="container-fluid tab-pane" id="viewGrid" role="tabpanel" aria-labelledby="gridTab">
+  <div class="card-columns">
+      <!-- Card 1 ABACATE-->
+      <div class="card">
+            <img class="card-img-bottom" src="images/veggies/abacate_Persea_americana.jpg" alt="Abacate">
+          <div class="card-body">
+              <small>Nome Comum</small>
+              <h2 class="card-title">Abacate</h2>
+
+              <small for="cientifico">Nome científico</small>  
+              <p class="cientifico">Persea americana</p>
+              
+              <div class="row">
+                <div class="col-6">
+                    <small>Tipo</small><br>
+                    <img src="images/icons/icon_tree.png" alt="icon_tree">
+                </div>
+                <div class="col-6">
+                    <small>Parte</small><br>
+                    <img src="images/icons/icon_fruit.png" alt="icon_fruit">
+                </div>
+              </div>
+
+              <small>Origem geográfica</small>
+              <p>América do Norte (México)</p>
+
+              <small>Bioma/Habitat <span class="small">ou de naturalização</span></small>
+              <p>Florestas de regiões tropicais e subtropicais (árvore)</p>
+
+              <small class="d-block">Polinização</small>
+              <img src="images/icons/icon_abelha.png" height="50%">
+              <img src="images/icons/icon_mosca.png" height="50%">
+              <img src="images/icons/icon_vespa.png" height="50%">
+              <img src="images/icons/icon_formiga.png" height="50%">
+              
+              <small class="d-block">Características</small>
+              <p>Maior produção com polinizadores. É polinizado principalmente por dípteros (moscas) e outros insetos nativos, como abelhas sem ferrão (uruçu do litoral do Nordeste ou Melipona scutellaris), e vespas, mas também por outros insetos de origem europeia como a abelha Apis sp., uma espécie de mosca e, de forma secundária, por formigas. Cultivado há mais de 10.000 anos nas Américas, provavelmente é originário da região central do México.</p>
+
+              <small>Dispersão</small>
+              <p>-</p>
+          </div>
+      </div>
+      
+      <!-- Card 2 ABACAXI-->
+      <div class="card">
+          <img class="card-img-bottom" src="images/veggies/abacaxi_Ananas_comosus.jpg" alt="Abacaxi">
+        <div class="card-body">
+            <small>Nome Comum</small>
+            <h2 class="card-title">Abacaxi</h2>
+
+            <small for="cientifico">Nome científico</small>  
+            <p class="cientifico">Ananas comosus</p>
+            
+            <div class="row">
+              <div class="col-6">
+                  <small>Tipo</small><br>
+                  <img src="images/icons/icon_orchidea.png" alt="icon_tree">
+              </div>
+              <div class="col-6">
+                  <small>Parte</small><br>
+                  <img src="images/icons/icon_fruit.png" alt="icon_fruit">
+              </div>
+            </div>
+
+            <small>Origem geográfica</small>
+            <p>América do Sul</p>
+
+            <small>Bioma/Habitat <span class="small">ou de naturalização</span></small>
+            <p>Savanas <br>
+              Cerrado (bromeliácea)</p>
+
+            <small class="d-block">Polinização</small>
+            <img src="images/icons/icon_colibri.png">
+            
+            <small class="d-block">Características</small>
+            <p>Os beija-flores são seus principais polinizadores naturais. A planta é
+                nativa da América do Sul e originária de áreas entre Brasil e Paraguai.
+                Existem evidências de que sua domesticação pode ter sido iniciada
+                entre 6.000 e 10.000 anos atrás.</p>
+
+            <small>Dispersão</small>
+            <p>-</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-body">
+            <small>Nome Comum</small>
+            <h2 class="card-title">Abiu</h2>
+
+            <small for="cientifico">Nome científico</small>  
+            <p class="cientifico">Ananas comosus</p>
+            
+            <div class="row">
+              <div class="col-6">
+                  <small>Tipo</small><br>
+                  <img src="images/icons/icon_orchidea.png" alt="icon_tree">
+              </div>
+              <div class="col-6">
+                  <small>Parte</small><br>
+                  <img src="images/icons/icon_fruit.png" alt="icon_fruit">
+              </div>
+            </div>
+
+            <small>Origem geográfica</small>
+            <p>América do Sul</p>
+
+            <small>Bioma/Habitat <span class="small">ou de naturalização</span></small>
+            <p>Savanas <br>
+              Cerrado (bromeliácea)</p>
+
+            <small class="d-block">Polinização</small>
+            <img src="images/icons/icon_colibri.png">
+            
+            <small class="d-block">Características</small>
+            <p>Os beija-flores são seus principais polinizadores naturais. A planta é
+                nativa da América do Sul e originária de áreas entre Brasil e Paraguai.
+                Existem evidências de que sua domesticação pode ter sido iniciada
+                entre 6.000 e 10.000 anos atrás.</p>
+
+            <small>Dispersão</small>
+            <p>-</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Abóbora</h2>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Abobrinha</h2>
+          </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Abrunho</h2>
+          </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Açafrão</h2>
+          </div>
+        </div>
+        <!-- Card 8 -->
+      <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Açaí</h2>
+          </div>
+        </div>
+        <!-- Card 9 -->
+      <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Acelga</h2>
+          </div>
+        </div>
+
+  </div>
+</article>
+</div>
+
+</section>
+
+<!-- JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+<!--
+      <div class="row">
+	<div class="col text-right">
+		<a href="https://www.facebook.com/ekokya/" target="_blank">
+		<button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="bottom" title="Siga-nos">Facebook</button>
+	  </a>    </div>
+    <div class="col">
+    	<a href="mailto:contact@eko-kya.net">
+    	<button type="button" class="btn btn-outline-dark">Cont@to</button></a>  
+     </div>
+    </div>
+-->

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab:300,400&display=swap');
+
+/* CSS Document */
+
+body {
+font-family: Roboto, sans-serif;
+}
+h1,h2,h3 {
+font-family: 'Roboto Slab', serif;
+font-weight: 300;
+}
+@media (max-width: 767.98px) { 
+  h2.index {
+    font-size: 1.6rem;
+  }
+}
+
+header .nav {
+  z-index: 2;;
+}
+footer {
+  background-color: #FF6600;
+  /*background-color:#A43223;*/
+  padding: 2rem 0;
+}
+.material-icons {
+    vertical-align: bottom;
+}
+
+.active {
+  font-weight: bold;
+}
+
+ul.share-buttons{
+list-style: none;
+padding: 0;
+text-align: center;
+}
+
+ul.share-buttons li{
+display: inline;
+}
+
+.text-shadow {
+  text-shadow:1px 2px 4px black;
+}
+
+/* HEADER BACKGROUNDS */
+.feira {
+  /*background:url(../images/M1_cover.jpg) no-repeat bottom center; */
+  background:url(../images/vegetais_da_feira.jpg) no-repeat center center; 
+  background-size: cover;
+  /*background-attachment:fixed;*/
+}
+.leaves {
+  background: url(../images/leaves_pattern.jpg) repeat center center;
+  background-attachment: fixed;
+}
+.honey {
+    background: url(../images/honey_pattern.png) repeat center center;
+}
+
+/* FORMS */
+
+.btn {
+border-radius:1.3rem;
+padding:0.4rem 1.2rem;
+}
+
+label {
+  color:grey;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) { 
+
+  .navbar li {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom:lightgrey 1px solid;
+  }
+  .navbar li:last-child {
+    border-bottom:none;
+  }
+}

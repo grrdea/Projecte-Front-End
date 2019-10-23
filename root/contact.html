@@ -1,0 +1,332 @@
+<!doctype HTML>
+<html lang="pt">
+<head>
+<title>EKO-KYA · O localizador de biodiversidade </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!--FAVICON-->
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<link rel="manifest" href="favicons/site.webmanifest">
+<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#a43223">
+<link rel="shortcut icon" href="favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!--ICONS-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--CSS FILES-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- SCRIPTS-->
+<script>
+function toggle_menu () {
+    var toggle = document.getElementById("icon_menu").innerHTML;
+    if (toggle == "menu") {
+    document.getElementById("icon_menu").innerHTML="clear";
+    document.getElementById("shadowNavbar").style.boxShadow="0px 2px 10px black";
+    } else {
+    document.getElementById("icon_menu").innerHTML="menu";
+    document.getElementById("shadowNavbar").style.boxShadow="none";
+    }
+}
+</script>
+</head>
+
+
+<!-- BODY-->
+<body>
+<!--header-->  
+<header>
+<!-- MAIN MENU-->
+<nav class="navbar navbar-expand-sm" id="shadowNavbar">
+    <ul class="navbar-nav collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html"><span class="material-icons" aria-label="home">home</span> Localizador</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">Projeto</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contato</a>
+        </li>
+        <li class="nav-item">
+            <!--<a class="nav-link" href="">Inscríbase</a>-->
+            <a class="nav-link text-primary" type="button" data-toggle="modal" data-target="#logIn">
+                <i class="material-icons">perm_identity</i>Acesso</a>                
+        </li>
+        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" onclick="toggle_menu()">
+            <i class="material-icons" id="icon_menu">menu</i>
+        </button>
+        <a class="ml-2 ml-sm-4 navbar-brand">
+            <img src="images/imago_small_ekokya.png" alt="Eko-Kya®, o jogo da biodiversidade" width="auto" height="auto" class="img-fluid mx-auto d-block">
+        </a>
+    </nav>
+</header>
+
+<!-- LOGIN MODAL-->
+<div class="modal" id="logIn">
+        <div class="modal-dialog modal-dialog-centered">      
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title">Acesso</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Correio eletrônico</label>
+                        <input type="text" class="form-control" id="email" placeholder="@">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="text" class="form-control" id="email" placeholder="psw">
+                    </div>
+                    <button class="btn btn-primary" type="button" data-toggle="" data-target="#" onclick="">Acesso</button>
+                </form>
+              </div>
+              <div class="modal-footer bg-warning">
+                    <p>Você é novo neste site? 
+                        <a class="btn btn-outline-dark" href="signup.html">
+                            <i class="material-icons">person_add</i>
+                            Inscrever-se
+                        </a>
+                    </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      
+<!--MAIN-->
+<div class="jumbotron jumbotron-fluid bg-success">
+    <div class="container">
+        <div class="col-12 mt-5">
+            <h2 class="text-white"><span class="bg-primary px-1">Contato</span></h2>
+        </div>
+        <div class="col-12">
+            <h1 class="text-white text-shadow">Eko-Kya</h1>
+            <h4>É un projeto worldwide! <span class="font-weight-bold"> E interconnectado! <i class="material-icons">mobile_friendly</i></span></h4>
+        </div>
+    </div>
+</div>
+
+    <!--<div>
+        <picture>
+            <img src="images/planta.jpg" class="image-responsive img-fluid" alt="Desenvolvimento da unma planta">
+        </picture>
+    </div>-->
+</div>
+
+<!--Section: Services-->
+<section class="pb-4">
+    <div class="container">
+        <div class="row d-flex justify-content-around justify-content-between text-center align-items-end">
+            <div class="col-8 col-md-3">
+                <img src="images/contact_ant_bring.png" alt="Informe-nós" class="img-fluid">
+                <h3 class="text-success">Informe</h3>
+                <p>Encontrou uma espécie vegetai que não aparece na proposta? Você tem uma foto dela? <a href="#contact"> Envie!</a></p>
+            </div>
+            <div class="col-8 col-md-3 mt-sm-3">
+                <img src="images/contact_ant_keep.png" alt="Participe" class="img-fluid">
+                <h3 class="text-success">Participe</h3>
+                <p>A união é forte! Siga nossa página e participe de nosso grupo nas redes sociais. <a href="#social"> Compartilhe!</a></p>
+            </div>
+            <div class="col-8 col-md-3" mt-sm-3>
+                <img src="images/contact_ant_talk.png" alt="Participe" class="img-fluid">
+                <h3 class="text-success">Pregunte</h3>
+                <p>Parlant els "animals" ens entenem. Qualsevol cosa estem encantats d'escoltar-te. <a href="#contact"> Escreva para nós!</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Section: Contact v.2-->
+<section class="bg-light" id="contact">
+<div class="container py-4">
+
+        <!--Section heading-->
+        <h2 class="h2 mt-4">Contato</h2>
+        <!--Section description-->
+        <p class="w-responsive mx-auto mb-5"><strong>Você tem alguma pergunta ou sugestão?</strong> Por favor, não hesite em nos contatar diretamente. Nossa equipe entrará em contato com você em questão de horas para ajudá-lo.</p>
+
+    <div class="row d-flex justify-content-between">
+            <!--Grid column-->
+            <div class="col-md-8 mb-5">
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+    
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name" class="placeholder-shown">Nome</label>
+                                <input type="text" id="name" name="name" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email" class="placeholder-shown">Correo electrónico</label>
+                                <input type="email" id="email" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="subject" class="placeholder-shown">Assunto</label>
+                                <input type="text" id="subject" name="subject" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="message">Messagem</label>
+                                <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                
+                
+                <!--Grid row / IMAGEM-->
+                <div class="row">
+                        <div class="col-12">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <label for="fileToUpload"><i class="material-icons">add_photo_alternate</i> Selecione a imagem para enviar </label></br>
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                            <!--<input class="btn btn-outline-primary" type="submit" value="Upload" name="submit">-->
+                        </form>
+                        </div>
+                </div>
+
+                <div class="text-center text-md-left mt-4">
+                    <img src="https://developers.google.com/recaptcha/images/invisible_badge.png" alt="recaptcha">
+                </div>
+
+                <div class="text-center text-md-left mt-4 align-items-baseline text-primary">
+                    <!--<a class="btn btn-outline-primary" onclick="document.getElementById('contact-form').submit();"><i class="material-icons">send</i> SEND</a>
+                    <button class="btn btn-primary" onclick="document.getElementById('contact-form').submit();"><i class="material-icons">send</i> SEND</button>-->
+                    <button class="btn btn-outline-primary" onclick="validateForm()" type="submit" name="submit"><i class="material-icons">send</i> SEND</button>
+                </div>
+                <div class="status"></div>
+                </form>
+            </div>
+
+            <!-- SOCIAL LINKS-->
+            
+            <div id="social" class="col-md-3 text-center text-md-left align-self-start border-top border-success py-4">
+                    <h3 class="text-success">KYA SOCIAL</h3>
+                    <p class="mt-4"><a href="https://www.facebook.com/ekokya/" target="_blank"><span class="material-icons">favorite</span> Síguenos no Facebook</a></p>
+                    <p class="d-inline-block"></p><a href="https://www.facebook.com/groups/1009405879112966/" target="_blank"><span class="material-icons">group_add</span> Grupo do Facebook</a></p>
+            </div>
+            <!--Grid column-->
+    
+    
+        </div>
+</div>
+</section>
+<!--Section: Contact v.2-->
+
+<script>
+function validateForm() {
+    var name =  document.getElementById('name').value;
+    if (name == "") {
+        document.getElementById('status').innerHTML = "Name cannot be empty";
+        return false;
+    }
+    var email =  document.getElementById('email').value;
+    if (email == "") {
+        document.getElementById('status').innerHTML = "Email cannot be empty";
+        return false;
+    } else {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(email)){
+            document.getElementById('status').innerHTML = "Email format invalid";
+            return false;
+        }
+    }
+    var subject =  document.getElementById('subject').value;
+    if (subject == "") {
+        document.getElementById('status').innerHTML = "Subject cannot be empty";
+        return false;
+    }
+    var message =  document.getElementById('message').value;
+    if (message == "") {
+        document.getElementById('status').innerHTML = "Message cannot be empty";
+        return false;
+    }
+    document.getElementById('status').innerHTML = "Sending...";
+    document.getElementById('contact-form').submit();
+    
+    }
+</script>
+
+<!--FOOTER-->
+<footer class="bg-primary">
+<!--idioma-->
+<div class="container">
+    <div class="row align-items-baseline text-center mb-4">
+        <div class="col-md-2 mb-4 mb-md-0 text-md-left">
+        <div class="dropdown">
+                <button type="button" class="btn-sm  dropdown-toggle" data-toggle="dropdown">
+                Idioma
+                </button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item active" href="#">Brasileiro</a>
+                <a class="dropdown-item disabled" href="#">English</a>
+                <a class="dropdown-item disabled" href="#">Català</a>
+                </div>
+        </div>
+        </div> <!--end idioma col-->
+        <!--credits/legal-->
+        <div class="col-md-10 text-md-right">
+        <div class="justify-content-end">
+            <a href="#" class="mr-3 text-white">Privadesa</a></li>
+            <a href="#" class="mr-3 text-white">Termos e condiciones</a></li>
+            <span>© Eko-Kya 2019</span>
+        </div>
+        <!--<div class="col-l-8">
+        <ul class="list-unstyled list-inline align-self-bottom">
+            <li class="list-inline-item"><a href="#">Privadesa</a></li>
+            <li class="list-inline-item"><a href="#">Termos e condiciones</a></li>
+            <li class="list-inline-item">© Eko-Kya 2019. Tudos os dereitos reservados.</li>
+        </ul>
+        </div>-->
+        </div><!--end credits ccol-->
+    </div><!--end language row-->
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
